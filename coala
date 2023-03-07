@@ -1,0 +1,18 @@
+import os
+
+# Получение текущего рабочего каталога
+current_directory = os.getcwd()
+
+# Вывод текущего рабочего каталога на экран
+print("Текущий рабочий каталог:", current_directory)
+
+# Индексация текущего рабочего каталога
+directories = current_directory.split("/")
+index = {}
+for i, directory in enumerate(directories):
+    index[directory] = i
+
+# Вывод индекса текущего рабочего каталога на экран
+print("Индекс текущего рабочего каталога:")
+for directory, i in index.items():
+    print(directory, "->", i)
